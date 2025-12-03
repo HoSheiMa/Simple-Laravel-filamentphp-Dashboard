@@ -14,15 +14,15 @@ return new class extends Migration
     Schema::create('skills', function (Blueprint $table) {
         $table->id();
         $table->string('name')->unique();
-        $table->string('category');
-        $table->unsignedTinyInteger('proficiency_level')->nullable(); // dependent
+        $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+        $table->unsignedTinyInteger('proficiency_level')->nullable();
         $table->boolean('is_active')->default(true);
-        $table->text('description')->nullable(); // markdown
+        $table->text('description')->nullable();
         $table->json('attachments')->nullable();
         $table->json('tags')->nullable();
         $table->text('notes')->nullable();
+        $table->boolean('archived')->default(false);
         $table->timestamps();
-        $table->softDeletes();
     });
 }
 

@@ -2,21 +2,17 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Skill extends Model
 {
-    
-    protected $casts = [
-        'attachments' => 'array',
-        'tags' => 'array',
-        'is_active' => 'boolean',
-        'archived' => 'boolean',
-    ];
+    use HasFactory;
 
     protected $fillable = [
         'name',
-        'category',
+        'category_id',
         'proficiency_level',
         'is_active',
         'description',
@@ -25,6 +21,18 @@ class Skill extends Model
         'notes',
         'archived',
     ];
+
+    protected $casts = [
+        'is_active' => 'boolean',
+        'archived' => 'boolean',
+        'attachments' => 'array',
+        'tags' => 'array',
+    ];
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
+    }
 
     public function scopeActive($query)
     {

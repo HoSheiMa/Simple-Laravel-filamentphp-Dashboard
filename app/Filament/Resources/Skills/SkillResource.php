@@ -25,6 +25,10 @@ class SkillResource extends Resource
     {
         return SkillForm::configure($schema);
     }
+    public static function getNavigationBadge(): ?string
+    {
+        return (string) Skill::notArchived()->count();
+    }
 
     public static function table(Table $table): Table
     {
