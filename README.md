@@ -151,3 +151,54 @@ php artisan test
 -   Wizard UX for create/edit skills.
 -   In‑app statistics widgets for skills.
 -   Database‑backed notifications integrated into the Filament UI.
+
+
+## Screenshots
+
+### Dashboard & Skills
+
+**Dashboard**
+
+![Dashboard](screenshots/Dashboard.png)
+
+**Skills Table**
+
+![Skills Table](screenshots/Skills-table.png)
+
+---
+
+### Skill Form – Wizard Steps
+
+**Step 1 – Basic Info**
+
+![Edit Skill – Basic Info](screenshots/Edit-Skill-Basic-Info.png)
+
+**Step 2 – Proficiency Details**
+
+![Edit Skill – Proficiency Details](screenshots/Edit-Skill-Proficiency-Details.png)
+
+**Step 3 – Tags & Attachments**
+
+![Edit Skill – Tags & Attachments](screenshots/Edit-Skill-Tags-and-Attachments.png)
+
+**Step 4 – Notes (with Alpine Counter)**
+
+![Edit Skill – Notes](screenshots/Edit-Skill-Notes.png)
+
+---
+
+### Categories & API Sync
+
+**Categories Table**
+
+![Categories Table](screenshots/Categories-table.png)
+
+**Create Category**
+
+![Create Category](screenshots/Create-Category.png)
+
+**Sync Categories from External API**
+
+![Sync From API](screenshots/Sync-From-API.png)
+
+---
