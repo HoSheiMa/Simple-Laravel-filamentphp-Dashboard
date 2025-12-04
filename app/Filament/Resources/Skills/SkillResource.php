@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Skills;
 use App\Filament\Resources\Skills\Pages\CreateSkill;
 use App\Filament\Resources\Skills\Pages\EditSkill;
 use App\Filament\Resources\Skills\Pages\ListSkills;
+use App\Filament\Resources\Skills\Pages\ViewSkill;
 use App\Filament\Resources\Skills\Schemas\SkillForm;
 use App\Filament\Resources\Skills\Tables\SkillsTable;
 use App\Models\Skill;
@@ -48,6 +49,6 @@ class SkillResource extends Resource
             'index' => ListSkills::route('/'),
             'create' => CreateSkill::route('/create'),
             'edit' => EditSkill::route('/{record}/edit'),
-        ];
+            'view' => ViewSkill::route('/{record}'),        ];
     }
 }

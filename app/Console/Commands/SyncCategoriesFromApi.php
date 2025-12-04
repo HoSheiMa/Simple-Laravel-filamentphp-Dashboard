@@ -19,7 +19,7 @@ class SyncCategoriesFromApi extends Command
             $this->info('Fetching categories from Rinvex API...');
 
             $response = Http::timeout(15)
-                ->get('https://692f9b9b778bbf9e006def35.mockapi.io/api/Rinvex/categories/categories');
+                ->get(env('RINVEX_API_CATEGORIES_URL_V1'));
 
             if ($response->failed()) {
                 $this->error('Failed to fetch categories from API');

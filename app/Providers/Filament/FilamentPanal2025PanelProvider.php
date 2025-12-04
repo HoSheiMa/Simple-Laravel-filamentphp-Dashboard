@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Resources\Skills\Widgets\SkillStatsWidget;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -25,8 +26,9 @@ class FilamentPanal2025PanelProvider extends PanelProvider
     {
         return $panel
             ->default()
-            ->id('filamentPanal2025')
-            ->path('filamentPanal2025')
+            ->id('admin')
+            ->path('admin')
+            ->databaseNotifications() 
             ->login()
             ->colors([
                 'primary' => Color::Amber,
@@ -40,6 +42,7 @@ class FilamentPanal2025PanelProvider extends PanelProvider
             ->widgets([
                 AccountWidget::class,
                 FilamentInfoWidget::class,
+                SkillStatsWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
