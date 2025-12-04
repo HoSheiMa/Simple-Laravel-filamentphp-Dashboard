@@ -16,7 +16,7 @@ A mini Laravel 11 + Filament v4 module for tracking team skills. It shows end‑
 ## 2. Setup
 
 ```bash
-git clone [<your-repo-url>](https://github.com/HoSheiMa/Simple-Laravel-filamentphp-Dashboard.git) acme
+git clone https://github.com/HoSheiMa/Simple-Laravel-filamentphp-Dashboard.git acme
 cd acme
 
 cp .env.example .env
